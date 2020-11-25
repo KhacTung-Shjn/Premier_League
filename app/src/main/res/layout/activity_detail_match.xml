@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageBackgroundMatch"
+        android:layout_width="0dp"
+        android:layout_height="218dp"
+        android:alpha="0.8"
+        android:background="@drawable/background_detail_match"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:contentDescription="@null"
+        android:padding="@dimen/dp_8"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageRing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        android:src="@drawable/state_click_ring"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageBack" />
+
+    <TextView
+        android:id="@+id/textTimeMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBack" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imageHomeTeam"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_juventus"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimeMatch" />
+
+    <TextView
+        android:id="@+id/textHomeTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="@+id/imageHomeTeam"
+        app:layout_constraintStart_toStartOf="@+id/imageHomeTeam"
+        app:layout_constraintTop_toBottomOf="@+id/imageHomeTeam" />
+
+    <ImageView
+        android:id="@+id/imageWayTeam"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_real_madrid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideLineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/textTimeMatch" />
+
+    <TextView
+        android:id="@+id/textAwayTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="@+id/imageWayTeam"
+        app:layout_constraintStart_toStartOf="@+id/imageWayTeam"
+        app:layout_constraintTop_toBottomOf="@+id/imageWayTeam" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_40"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHomeTeam"
+        app:layout_constraintEnd_toStartOf="@+id/imageWayTeam"
+        app:layout_constraintStart_toEndOf="@+id/imageHomeTeam"
+        app:layout_constraintTop_toTopOf="@+id/imageHomeTeam" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabDetailMatch"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_30"
+        app:tabIconTint="@color/bg_icon_tab_layout"
+        app:layout_constraintBottom_toTopOf="@+id/viewPagerDetailMatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBackgroundMatch"
+        app:tabIndicatorGravity="top"
+        app:tabIndicatorHeight="@dimen/dp_2" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerDetailMatch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabDetailMatch" />
+
+    <TextView
+        android:id="@+id/textStatusMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_match_not_play"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBackgroundMatch" />
+</androidx.constraintlayout.widget.ConstraintLayout>

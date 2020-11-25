@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVerticalItemPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizonItemPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/dp_48" />
+
+    <View
+        android:id="@+id/viewLinePlayer"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_athens_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageTeamPlayer"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:src="@drawable/ic_football_player"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNamePlayer"
+        style="@style/TextItemPlayer"
+        android:layout_marginStart="@dimen/dp_8"
+        app:layout_constraintStart_toEndOf="@+id/imageTeamPlayer"
+        app:layout_constraintTop_toTopOf="@+id/imageTeamPlayer" />
+
+    <TextView
+        android:id="@+id/textInfoPlayer"
+        style="@style/TextItemPlayer"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@+id/guideLineVerticalItemPlayer"
+        app:layout_constraintStart_toStartOf="@+id/textNamePlayer"
+        app:layout_constraintTop_toBottomOf="@+id/textNamePlayer" />
+
+    <TextView
+        android:id="@+id/textMatchPlayed"
+        style="@style/TextItemPlayer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textPlayerGoal"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/guideLineVerticalItemPlayer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPlayerGoal"
+        style="@style/TextItemPlayer"
+        app:layout_constraintBottom_toBottomOf="@+id/textMatchPlayed"
+        app:layout_constraintEnd_toStartOf="@+id/textPlayerYellowCard"
+        app:layout_constraintStart_toEndOf="@+id/textMatchPlayed"
+        app:layout_constraintTop_toTopOf="@+id/textMatchPlayed" />
+
+    <TextView
+        android:id="@+id/textPlayerYellowCard"
+        style="@style/TextItemPlayer"
+        app:layout_constraintBottom_toBottomOf="@+id/textPlayerGoal"
+        app:layout_constraintEnd_toStartOf="@+id/textPlayerRedCard"
+        app:layout_constraintStart_toEndOf="@+id/textPlayerGoal"
+        app:layout_constraintTop_toTopOf="@+id/textPlayerGoal" />
+
+    <TextView
+        android:id="@+id/textPlayerRedCard"
+        style="@style/TextItemPlayer"
+        app:layout_constraintBottom_toBottomOf="@+id/textPlayerYellowCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textPlayerYellowCard"
+        app:layout_constraintTop_toTopOf="@+id/textPlayerYellowCard" />
+</androidx.constraintlayout.widget.ConstraintLayout>

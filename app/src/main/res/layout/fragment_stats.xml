@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textTitleSeason"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/color_limed_spruce"
+        android:gravity="center"
+        android:text="@string/title_season"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <View
+        android:id="@+id/viewTitle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/color_river_bed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitleSeason" />
+
+    <TextView
+        android:id="@+id/textTitleTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_team"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTitle"
+        app:layout_constraintEnd_toEndOf="@+id/guideLineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewTitle" />
+
+    <TextView
+        android:id="@+id/textTitleNumberMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_number_match"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTitle"
+        app:layout_constraintEnd_toStartOf="@+id/textTitleWin"
+        app:layout_constraintStart_toStartOf="@+id/guideLineVertical"
+        app:layout_constraintTop_toTopOf="@+id/viewTitle" />
+
+    <TextView
+        android:id="@+id/textTitleWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_win"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTitle"
+        app:layout_constraintEnd_toStartOf="@+id/textTitleTie"
+        app:layout_constraintStart_toEndOf="@+id/textTitleNumberMatch"
+        app:layout_constraintTop_toTopOf="@+id/viewTitle" />
+
+    <TextView
+        android:id="@+id/textTitleTie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_tie"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTitle"
+        app:layout_constraintEnd_toStartOf="@+id/textTitleLose"
+        app:layout_constraintStart_toEndOf="@+id/textTitleWin"
+        app:layout_constraintTop_toTopOf="@+id/viewTitle" />
+
+    <TextView
+        android:id="@+id/textTitleLose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_lose"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTitle"
+        app:layout_constraintEnd_toStartOf="@+id/textTitleGoalDiff"
+        app:layout_constraintStart_toEndOf="@+id/textTitleTie"
+        app:layout_constraintTop_toTopOf="@+id/viewTitle" />
+
+    <TextView
+        android:id="@+id/textTitleGoalDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_goal_difference"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTitle"
+        app:layout_constraintEnd_toStartOf="@+id/textTitlePoint"
+        app:layout_constraintStart_toEndOf="@+id/textTitleLose"
+        app:layout_constraintTop_toTopOf="@+id/viewTitle" />
+
+    <TextView
+        android:id="@+id/textTitlePoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_point"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textTitleGoalDiff"
+        app:layout_constraintTop_toTopOf="@+id/viewTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerStats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

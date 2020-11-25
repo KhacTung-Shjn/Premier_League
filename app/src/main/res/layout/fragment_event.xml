@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textTitleLineUp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:background="@color/color_athens_gray"
+            android:gravity="center"
+            android:text="@string/title_event"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleLineUp" />
+
+        <View
+            android:layout_width="@dimen/dp_2"
+            android:layout_height="0dp"
+            android:background="@color/color_green_malachite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/imageFinish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageClock" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerEvent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageClock" />
+
+        <ImageView
+            android:id="@+id/imageFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/ic_finish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerEvent" />
+
+        <View
+            android:id="@+id/viewBackgroundNode"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageFinish" />
+
+        <TextView
+            android:id="@+id/textGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_16"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/label_goal"
+            app:drawableStartCompat="@drawable/ic_football_goal"
+            app:layout_constraintBottom_toTopOf="@+id/textFreeKick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewBackgroundNode" />
+
+        <TextView
+            android:id="@+id/textAssist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/label_assist"
+            app:drawableStartCompat="@drawable/ic_assist"
+            app:layout_constraintStart_toEndOf="@+id/textGoal"
+            app:layout_constraintTop_toTopOf="@+id/textGoal" />
+
+        <TextView
+            android:id="@+id/textPenalty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/label_penalty"
+            app:drawableStartCompat="@drawable/ic_penalty"
+            app:layout_constraintStart_toEndOf="@+id/textAssist"
+            app:layout_constraintTop_toTopOf="@+id/textAssist" />
+
+        <TextView
+            android:id="@+id/textFreeKick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/label_free_kick"
+            app:drawableStartCompat="@drawable/ic_free_kick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textGoal"
+            app:layout_constraintTop_toBottomOf="@+id/textGoal" />
+
+        <TextView
+            android:id="@+id/textOwnGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/label_own_goal"
+            app:drawableStartCompat="@drawable/ic_own_goal"
+            app:layout_constraintStart_toEndOf="@+id/textFreeKick"
+            app:layout_constraintTop_toTopOf="@+id/textFreeKick" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

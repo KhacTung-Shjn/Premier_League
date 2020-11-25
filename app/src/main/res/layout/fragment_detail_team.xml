@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarTeam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/color_green_malachite"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backgroundDetailTeam"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_240"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_detail_team"
+                    android:tintMode="src_over"
+                    app:layout_collapseMode="parallax"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageDetailTeam"
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_120"
+                    android:elevation="@dimen/dp_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textDetailTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp_32"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageDetailTeam"
+                    app:layout_constraintStart_toStartOf="@+id/imageDetailTeam"
+                    app:layout_constraintTop_toBottomOf="@+id/imageDetailTeam" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarDetailTeam"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/imageBackToolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_back"
+                     />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCenterVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/textCoach"
+                style="@style/TextTitlePlayer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_32"
+                android:background="@color/color_athens_gray"
+                android:gravity="center_vertical"
+                android:text="@string/title_coach"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageCoachOne"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                app:layout_constraintBottom_toTopOf="@+id/includeGoalkeeper"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textCoach"
+                app:srcCompat="@drawable/ic_coach" />
+
+            <TextView
+                android:id="@+id/textNameCoachOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toEndOf="@+id/imageCoachOne"
+                app:layout_constraintTop_toTopOf="@+id/imageCoachOne" />
+
+            <TextView
+                android:id="@+id/textInfoCoachOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="@+id/imageCoachOne"
+                app:layout_constraintStart_toStartOf="@+id/textNameCoachOne"
+                app:layout_constraintTop_toBottomOf="@+id/textNameCoachOne" />
+
+            <ImageView
+                android:id="@+id/imageCoachTwo"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_20"
+                app:layout_constraintBottom_toBottomOf="@+id/imageCoachOne"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCenterVertical"
+                app:layout_constraintTop_toTopOf="@+id/imageCoachOne"
+                app:srcCompat="@drawable/ic_coach" />
+
+            <TextView
+                android:id="@+id/textNameCoachTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toEndOf="@+id/imageCoachTwo"
+                app:layout_constraintTop_toTopOf="@+id/imageCoachTwo" />
+
+            <TextView
+                android:id="@+id/textInfoCoachTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="@+id/imageCoachTwo"
+                app:layout_constraintStart_toStartOf="@+id/textNameCoachTwo"
+                app:layout_constraintTop_toBottomOf="@+id/textNameCoachTwo" />
+
+            <include
+                android:id="@+id/includeGoalkeeper"
+                layout="@layout/title_info_player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageCoachOne" />
+
+            <TextView
+                android:id="@+id/textGoalkeeper"
+                style="@style/TextTitlePlayer"
+                android:text="@string/title_goalkeeper"
+                app:layout_constraintBottom_toBottomOf="@+id/includeGoalkeeper"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/includeGoalkeeper" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerGoalkeeper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/includeGoalkeeper" />
+
+            <include
+                android:id="@+id/includeDefender"
+                layout="@layout/title_info_player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerGoalkeeper" />
+
+            <TextView
+                android:id="@+id/textPlayerDefend"
+                style="@style/TextTitlePlayer"
+                android:text="@string/text_defender"
+                app:layout_constraintBottom_toBottomOf="@+id/includeDefender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/includeDefender" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPlayerDefend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/includeDefender" />
+
+            <include
+                android:id="@+id/includeMidfielder"
+                layout="@layout/title_info_player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerPlayerDefend" />
+
+            <TextView
+                android:id="@+id/textPlayerMidfield"
+                style="@style/TextTitlePlayer"
+                android:text="@string/text_midfielder"
+                app:layout_constraintBottom_toBottomOf="@+id/includeMidfielder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/includeMidfielder" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPlayerMidfield"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/includeMidfielder" />
+
+            <include
+                android:id="@+id/includeForwarder"
+                layout="@layout/title_info_player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerPlayerMidfield" />
+
+            <TextView
+                android:id="@+id/textPlayerForward"
+                style="@style/TextTitlePlayer"
+                android:text="@string/text_forwards"
+                app:layout_constraintBottom_toBottomOf="@+id/includeForwarder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/includeForwarder" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPlayerForward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/includeForwarder" />
+
+            <include
+                layout="@layout/item_gloss_index_player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerPlayerForward" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

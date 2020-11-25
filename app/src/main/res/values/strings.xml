@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Premier League</string>
+    <string name="text_forwards">Forwarder</string>
+    <string name="text_defender">Defender</string>
+    <string name="text_midfielder">Midfielder</string>
+    <string name="text_goal_difference">%s/%s</string>
+    <string name="text_score">%s - %s</string>
+    <string name="text_gloss_red_card">Red Card</string>
+    <string name="text_gloss_yellow_card">Yellow Card</string>
+    <string name="text_gloss_goal">Goal</string>
+    <string name="text_gloss_match_played">Match Played</string>
+    <string name="text_info_coach_format">Age %s • %s</string>
+    <string name="text_info_player">%s • Age %s • %s</string>
+    <string name="text_loading">Loading...</string>
+    <string name="text_about_app">About App</string>
+    <string name="text_language">Language</string>
+    <string name="text_feedback">Feedback</string>
+    <string name="text_share_with_friend">Share with friend</string>
+
+    <string name="label_goal">Goal</string>
+    <string name="label_assist">Assist</string>
+    <string name="label_penalty">Penalty</string>
+    <string name="label_free_kick">Free Kick</string>
+    <string name="label_own_goal">Own Goal</string>
+    <string name="label_match_not_play">The football match is not yet kicked</string>
+    <string name="label_add_notification_success">Add Notification Success</string>
+    <string name="label_add_notification_fail">Add Notification Fail</string>
+    <string name="label_delete_notification_success">Delete Notification Success</string>
+    <string name="label_delete_notification_fail">Delete Notification Fail</string>
+    <string name="label_press_back_once_again">Press again to exit !</string>
+
+    <string name="title_matches">MATCHES</string>
+    <string name="title_match">Match</string>
+    <string name="title_stat">Stat</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_main_lineup">Main LineUp</string>
+    <string name="title_substitutes">Substitutes</string>
+    <string name="title_coach">Coach</string>
+    <string name="title_player_absent">Missing Player</string>
+    <string name="title_event">Event</string>
+    <string name="title_search_matches">Search Matches</string>
+    <string name="title_team">Team</string>
+    <string name="title_season">Season 2020/2021</string>
+    <string name="title_number_match">PI</string>
+    <string name="title_win">W</string>
+    <string name="title_tie">D</string>
+    <string name="title_lose">L</string>
+    <string name="title_goal_difference">GD</string>
+    <string name="title_point">Pts</string>
+    <string name="title_statistic">Statistic</string>
+    <string name="title_select_date">Select Date</string>
+    <string name="title_goalkeeper">Goalkeeper</string>
+    <string name="title_address_match">%s \n %s, %s</string>
+
+    <string name="err_fist_param_not_be_null">First param should not be null, or you forgot passing one</string>
+    <string name="err_load_home_team">Could not download data home team. Please try again !</string>
+    <string name="err_load_reserves">Cannot load Reserve list, please try again !</string>
+    <string name="err_load_coaches">Cannot load Coach list, please try again !</string>
+    <string name="err_load_missing">Cannot load Missing Player list, please try again !</string>
+    <string name="err_load_events">Cannot load Event list, please try again !</string>
+    <string name="err_load_statistic">Can not load statistic for match, please try again !</string>
+    <string name="err_no_coach">No coach data!</string>
+    <string name="err_no_data">This team is don\'t have data</string>
+    <string name="err_no_player">No player data!</string>
+    <string name="err_no_match_in_this_time">No match in this time !</string>
+    <string name="err_internet">Please check your internet connection !</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_violet_electric">#6200EE</color>
+    <color name="color_purple">#3700B3</color>
+    <color name="color_blue_robin_egg">#03DAC5</color>
+    <color name="color_green_malachite">#16b13a</color>
+    <color name="color_amethyst_smoke">#9B94A7</color>
+    <color name="color_athens_gray">#EFF1F4</color>
+    <color name="color_river_bed">#414D57</color>
+    <color name="color_limed_spruce">#333D45</color>
+</resources>
