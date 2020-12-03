@@ -18,7 +18,7 @@ object TimeUtils : BaseView {
     fun getTime(distanceFrom: Int, distanceTo: Int): Time? {
         val currentDate = Calendar.getInstance()
         val year = currentDate.get(Calendar.YEAR)
-        val month = ((currentDate.get(Calendar.MONTH) + ONE) % MONTH_IN_YEAR)
+        val month = ((currentDate.get(Calendar.MONTH) + ONE))
         val day = currentDate.get(Calendar.DAY_OF_MONTH)
 
         val dayFrom = day - distanceFrom
